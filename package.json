@@ -1,0 +1,22 @@
+{
+  "name": "calendar-days",
+  "version": "1.0.0",
+  "description": "A super light-weight package to generate calendar days.",
+  "main": "dist/calendar-days.cjs.js",
+  "module": "dist/calendar-days.esm.js",
+  "browser": "dist/calendar-days.umd.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "pretest": "npm run build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "rollup": "^4.17.1"
+  },
+  "files": [
+    "dist"
+  ]
+}
