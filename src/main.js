@@ -32,4 +32,4 @@ const getDaysInRange = (date = new Date(), range = 'month') => {
   return calendarDays;
 };
 
-module.exports = getDaysInRange;
+export default getDaysInRange;

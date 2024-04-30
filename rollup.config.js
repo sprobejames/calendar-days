@@ -1,14 +1,13 @@
-const resolve = require('@rollup/plugin-node-resolve');
-const commonjs = require('@rollup/plugin-commonjs');
-const pkg = require('./package.json');
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 
-module.exports = [
+export default [
   // browser-friendly UMD build
   {
     input: 'src/main.js',
     output: {
       name: 'CalendarDays',
-      file: pkg.browser,
+      file: './dist/calendar-days.umd.js',
       format: 'umd',
     },
     plugins: [
@@ -27,8 +26,8 @@ module.exports = [
     input: 'src/main.js',
     external: ['ms'],
     output: [
-      { file: pkg.main, format: 'cjs' },
-      { file: pkg.module, format: 'es' },
+      { file: './dist/calendar-days.cjs.js', format: 'cjs' },
+      { file: 'dist/calendar-days.esm.js', format: 'es' },
     ],
   },
 ];
